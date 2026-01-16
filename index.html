@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLA Online Degree Programs</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* =====================
+   Global Styles
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #E3E4F3;
+  color: #747474;
+  line-height: 1.7;
+}
+a {
+  text-decoration: none;
+}
+section {
+  padding: 70px 6%;
+}
+h1, h2, h3 {
+  color: #355C94;
+}
+p {
+  margin-top: 15px;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =====================
+   Hero Section
+===================== */
+.hero {
+  background: linear-gradient(135deg, #355C94, #E3E4F3);
+  text-align: center;
+  padding: 120px 6%;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+.hero p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+.hero-buttons {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.hero-buttons a {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.btn-primary {
+  background-color: #355C94;
+  color: #fff;
+}
+.btn-primary:hover {
+  background-color: #2c4e7f;
+}
+.btn-secondary {
+  background-color: #fff;
+  color: #355C94;
+  border: 2px solid #355C94;
+}
+.btn-secondary:hover {
+  background-color: #355C94;
+  color: #fff;
+}
+
+/* =====================
+   Featured Image
+===================== */
+.featured-image {
+  display: flex;
+  justify-content: center;
+}
+.image-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+  max-width: 900px;
+}
+.image-card:hover {
+  transform: scale(1.03);
+}
+.image-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* =====================
+   Introduction & About
+===================== */
+.intro {
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.intro p {
+  color: #747474;
+}
+
+/* =====================
+   Courses
+===================== */
+.courses {
+  background-color: #E3E4F3;
+}
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+.course-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-10px);
+}
+.course-card span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 15px;
+  color: #355C94;
+}
+
+/* =====================
+   Eligibility
+===================== */
+.eligibility ul {
+  margin-top: 20px;
+  list-style: none;
+}
+.eligibility li::before {
+  content: "✔";
+  margin-right: 10px;
+  color: #355C94;
+  font-weight: bold;
+}
+
+/* =====================
+   Admission Process
+===================== */
+.process {
+  background: #fff;
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+.step {
+  background: #E3E4F3;
+  padding: 25px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.step strong {
+  display: block;
+  font-size: 1.4rem;
+  color: #355C94;
+  margin-bottom: 10px;
+}
+
+/* =====================
+   Fees & EMI
+===================== */
+.fees table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.fees th, .fees td {
+  padding: 15px;
+  text-align: center;
+}
+.fees th {
+  background-color: #355C94;
+  color: #fff;
+}
+.fees tr:nth-child(even) {
+  background-color: #E3E4F3;
+}
+.emi {
+  background: linear-gradient(135deg, #E3E4F3, #fff);
+  border-radius: 24px;
+  text-align: center;
+}
+
+/* =====================
+   Benefits
+===================== */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+.benefit {
+  background: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+/* =====================
+   Conclusion
+===================== */
+.conclusion {
+  background-color: #355C94;
+  color: #fff;
+  text-align: center;
+  border-radius: 30px;
+}
+.conclusion h2 {
+  color: #fff;
+}
+
+/* =====================
+   FAQ Accordion
+===================== */
+.faq {
+  background: #fff;
+}
+.faq-item {
+  margin-top: 15px;
+}
+.faq-item input {
+  display: none;
+}
+.faq-item label {
+  display: block;
+  background: #E3E4F3;
+  padding: 15px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.faq-item .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 15px;
+}
+.faq-item input:checked ~ .content {
+  max-height: 200px;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+  <h1>GLA Online Degree Programs</h1>
+  <p>Experience flexible, UGC-entitled, and NAAC-accredited online degree programs designed to deliver career-focused learning with academic excellence and digital innovation.</p>
+  <div class="hero-buttons">
+    <a href="https://glaonline.com/" class="btn-primary">Apply Now</a>
+    <a href="https://distanceeducationschool.com/" class="btn-secondary">Explore Universities</a>
+  </div>
+</section>
+
+<!-- Featured Image -->
+<section class="featured-image">
+  <div class="image-card">
+    <img src="image.webp" alt="GLA Online Degree Programs">
+  </div>
+</section>
+
+<!-- Introduction -->
+<section class="intro container">
+  <p>GLA University is a renowned institution with a strong legacy of academic excellence and innovation in higher education. With years of commitment to quality learning, the university has successfully extended its expertise into the online education ecosystem, enabling students across India to access world-class programs from the comfort of their homes.</p>
+
+  <p>The university is entitled by the University Grants Commission (UGC) and accredited with a prestigious NAAC grade, ensuring that every online degree holds the same academic value and industry recognition as a regular on-campus program. GLA’s online education framework is supported by dedicated learner support services, expert faculty mentorship, and a student-centric approach.</p>
+
+  <p><a href="https://distanceeducationschool.com/univeristy/gla-university">GLA Online</a> offers a robust digital learning environment powered by an advanced Learning Management System (LMS), interactive virtual classrooms, and continuous academic support. The programs are designed to provide flexibility for working professionals, entrepreneurs, and fresh learners, allowing them to balance education with personal and professional commitments while gaining industry-relevant knowledge.</p>
+</section>
+
+<!-- Courses -->
+<section class="courses">
+  <div class="container">
+    <h2>Courses Offered</h2>
+    <div class="course-grid">
+      <div class="course-card"><span>🎓</span>Online MBA</div>
+      <div class="course-card"><span>📘</span>Online BBA</div>
+      <div class="course-card"><span>💻</span>Online BCA</div>
+      <div class="course-card"><span>🖥</span>Online MCA</div>
+      <div class="course-card"><span>📊</span>Online B.Com</div>
+    </div>
+  </div>
+</section>
+
+<!-- Eligibility -->
+<section class="eligibility container">
+  <h2>Eligibility Criteria</h2>
+  <h3>Undergraduate Programs</h3>
+  <ul>
+    <li>10+2 from a recognized board</li>
+    <li>Minimum qualifying marks as per program norms</li>
+  </ul>
+  <h3>Postgraduate Programs</h3>
+  <ul>
+    <li>Bachelor’s degree from a recognized university</li>
+    <li>Relevant academic background for specialized programs</li>
+  </ul>
+</section>
+
+<!-- Admission Process -->
+<section class="process">
+  <div class="container">
+    <h2>Admission Process</h2>
+    <div class="process-steps">
+      <div class="step"><strong>1</strong>Apply Online</div>
+      <div class="step"><strong>2</strong>Register</div>
+      <div class="step"><strong>3</strong>Upload Documents</div>
+      <div class="step"><strong>4</strong>Fee Payment</div>
+      <div class="step"><strong>5</strong>Enrollment Confirmation</div>
+    </div>
+  </div>
+</section>
+
+<!-- Fee Structure -->
+<section class="fees container">
+  <h2>Fee Structure</h2>
+  <table>
+    <tr><th>Program</th><th>Total Fees</th></tr>
+    <tr><td>Online MBA</td><td>₹1,20,000</td></tr>
+    <tr><td>Online BBA</td><td>₹90,000</td></tr>
+    <tr><td>Online BCA</td><td>₹85,000</td></tr>
+    <tr><td>Online MCA</td><td>₹1,10,000</td></tr>
+    <tr><td>Online B.Com</td><td>₹75,000</td></tr>
+  </table>
+</section>
+
+<!-- EMI -->
+<section class="emi container">
+  <h2>EMI Options</h2>
+  <p>GLA Online offers learner-friendly EMI options that allow students to pay fees in easy monthly installments. This financial flexibility ensures uninterrupted learning without monetary burden, making quality education accessible to everyone.</p>
+</section>
+
+<!-- Benefits -->
+<section class="benefits container">
+  <h2>Benefits of GLA Online</h2>
+  <div class="benefits-grid">
+    <div class="benefit">Flexible learning schedule</div>
+    <div class="benefit">Industry-oriented curriculum</div>
+    <div class="benefit">Experienced faculty</div>
+    <div class="benefit">Online examinations</div>
+    <div class="benefit">Career & placement assistance</div>
+  </div>
+</section>
+
+<!-- Conclusion -->
+<section class="conclusion container">
+  <h2>Start Your Academic Journey Today</h2>
+  <p>GLA Online Degree Programs empower learners with future-ready education, academic credibility, and professional growth. Enroll today to unlock flexible learning pathways and advance your career with confidence.</p>
+</section>
+
+<!-- FAQs -->
+<section class="faq container">
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq1">
+    <label for="faq1">Are GLA Online degrees valid?</label>
+    <div class="content"><p>Yes, all degrees are UGC-entitled and NAAC-accredited.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq2">
+    <label for="faq2">Who can apply for online programs?</label>
+    <div class="content"><p>Students meeting the eligibility criteria can apply.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq3">
+    <label for="faq3">How are exams conducted?</label>
+    <div class="content"><p>Exams are conducted online with secure proctoring.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq4">
+    <label for="faq4">Is placement support available?</label>
+    <div class="content"><p>Yes, career guidance and placement assistance are provided.</p></div>
+  </div>
+
+  <div class="faq-item">
+    <input type="checkbox" id="faq5">
+    <label for="faq5">Can fees be paid in EMI?</label>
+    <div class="content"><p>Yes, flexible EMI options are available.</p></div>
+  </div>
+
+</section>
+
+</body>
+</html>
